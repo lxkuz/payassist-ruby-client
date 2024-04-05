@@ -13,11 +13,11 @@ require "payassist/errors"
 module Payassist
   # Base API client
   class Client
-    def send_request(method:, path:, headers: {}, body: {})
+    def send_request(path:, headers: {}, body: {}, method: :post)
       conn = faraday_with_block(url: Payassist.config.base_url)
       conn.headers = build_headers(headers)
       case method.to_s
-      when "get" then response = conn.get(path)
+      when "get" then response = conn.get(path, body)
       when "post" then response = conn.post(path, body.to_json)
       end
       interpret_response(response)
@@ -38,6 +38,15 @@ module Payassist
     end
 
     private
+
+    def prepare_body(tx_name, data)
+      {
+        'header' => {
+          'txName' => tx_name
+        },
+        'reqData' => data
+      }
+    end
 
     def build_headers(headers)
       {

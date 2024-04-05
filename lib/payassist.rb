@@ -2,13 +2,12 @@
 
 require "payassist/config"
 require "payassist/version"
+
 require "payassist/balance"
-
-# require "payassist/account"
-
+# require "payassist/bank"
+# require "payassist/transfer"
+require "payassist/bill_payment"
 # require "payassist/transaction"
-# require "payassist/deposit"
-# require "payassist/withdraw"
 
 # Head module
 module Payassist

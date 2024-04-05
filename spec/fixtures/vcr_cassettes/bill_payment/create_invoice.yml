@@ -1,0 +1,54 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://api.payassist.io/p2p/bill-payment/invoice/create
+    body:
+      encoding: UTF-8
+      string: '{"header":{"txName":"CreateBillInvoice"},"reqData":{"amount":300,"address":"0817","platform":"CARD","currency":"RUB","ip":"135.181.xx.xx","client":"89221111111","recipient":"user1","c_from":"TCSBRUB","c_to":"CARDRUB","date":"2024-04-05T19:40:19","txn":"2c9c407b-5576-43ba-b771-8890dc6a4e26","user_agent":"Mozilla/5.0
+        (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.116
+        Safari/537.36","email":"test@gmail.com","cid":"2c9c407b-5576-43ba-b771-8890dc6a4e27","paySource":"card"}}'
+    headers:
+      Authorization:
+      - Basic bGo4TkdpN3h0NVVnSngxSjpFYnNpTkJMdzVBOERxMGlwdmVhZmlHR2dDWmI5VVk=
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: ''
+    headers:
+      Date:
+      - Fri, 05 Apr 2024 12:59:05 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      X-Content-Type-Options:
+      - nosniff
+      X-Xss-Protection:
+      - 1; mode=block
+      Cache-Control:
+      - no-cache, no-store, max-age=0, must-revalidate
+      Pragma:
+      - no-cache
+      Expires:
+      - '0'
+      X-Frame-Options:
+      - DENY
+    body:
+      encoding: UTF-8
+      string: '{"header":{"txName":"CreateBillInvoice","version":"0.1","lang":"EN","androidVersion":1,"iosVersion":"1.0","traceId":"b21174f0d0798447"},"result":{"status":true,"message":"Request
+        completed successfully"},"responseData":{"message":"Customer order has been
+        registered, kindly share below details with them.","paymentLink":"https://api.step4pay.com/FE/rest/tx/c2c/purchase/execute?txId=9d4fba2f-82db-4ae3-9864-7eaacf6591d9","amount":300,"currency":"RUB","rate":1,"expiredTime":"2024-04-05T13:29:05Z","_id":"67bba050-d624-4f1e-aac2-2a4916d9755c","cAmount":300,"cType":"RUB"},"errors":null}'
+    http_version:
+  recorded_at: Fri, 05 Apr 2024 12:59:05 GMT
+recorded_with: VCR 5.1.0
