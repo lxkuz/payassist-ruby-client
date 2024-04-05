@@ -3,11 +3,12 @@
 module Payassist
   # Configuration storage
   class Config
-    attr_accessor :base_url, :api_token, :faraday_block
+    attr_accessor :base_url, :client_secret, :client_id, :faraday_block
 
     def initialize
       @base_url = nil
-      @api_token = nil
+      @client_secret = nil
+      @client_id = nil
       @faraday_block = nil
     end
   end

@@ -2,8 +2,10 @@
 
 require "payassist/config"
 require "payassist/version"
+require "payassist/balance"
+
 # require "payassist/account"
-# require "payassist/balance"
+
 # require "payassist/transaction"
 # require "payassist/deposit"
 # require "payassist/withdraw"

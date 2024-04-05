@@ -5,6 +5,7 @@
 # Includes methods common to collections, disbursements and remittances
 
 require "faraday"
+require "base64"
 
 require "payassist/config"
 require "payassist/errors"
@@ -40,19 +41,24 @@ module Payassist
 
     def build_headers(headers)
       {
-        "Authorization" => "Bearer #{Payassist.config.api_token}",
+        "Authorization" => "Basic #{build_api_token}",
         "Content-Type" => "application/json"
       }.merge(headers)
     end
 
     def faraday_with_block(options)
       Faraday.new(options)
-      block = payassist.config.faraday_block
+      block = Payassist.config.faraday_block
       if block
         Faraday.new(options, &block)
       else
         Faraday.new(options)
       end
+    end
+
+    def build_api_token
+      str = "#{Payassist.config.client_id}:#{Payassist.config.client_secret}"
+      Base64.encode64(str).gsub(/\n/, '')
     end
   end
 end
