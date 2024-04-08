@@ -1,24 +1,44 @@
 # Payassist
 
-TODO: Delete this and the text below, and describe your gem
-
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/payassist`. To experiment with that code, run `bin/console` for an interactive prompt.
+Ruby client for https://developer.payassist.io/ru/p2p
 
 ## Installation
 
-TODO: Replace `UPDATE_WITH_YOUR_GEM_NAME_PRIOR_TO_RELEASE_TO_RUBYGEMS_ORG` with your gem name right after releasing it to RubyGems.org. Please do not do it earlier due to security reasons. Alternatively, replace this section with instructions to install your gem from git if you don't plan to release to RubyGems.org.
-
-Install the gem and add to the application's Gemfile by executing:
-
-    $ bundle add UPDATE_WITH_YOUR_GEM_NAME_PRIOR_TO_RELEASE_TO_RUBYGEMS_ORG
-
-If bundler is not being used to manage dependencies, install the gem by executing:
-
-    $ gem install UPDATE_WITH_YOUR_GEM_NAME_PRIOR_TO_RELEASE_TO_RUBYGEMS_ORG
+bundle install payassist
 
 ## Usage
 
-TODO: Write usage instructions here
+```ruby
+
+    Payassist.configure do |config|
+      config.base_url = "https://api.payassist.io/p2p"
+      config.client_id = "<YOUR CLIENT ID>"
+      config.client_secret = "<YOUR CLIENT SECRET>"
+    end
+
+    # To get balance
+    balance_data = Payassist::Balance.new.get({
+        "provider" => ["CARD"],
+        "currency" => ["RUB"]
+    })['responseData']['accounts']
+
+
+    # Deposit money on account
+    bill_payment_data = Payassist::BillPayment.new.create_host2host(request_data)['responseData']
+
+
+    # To proceed withdrawal
+    transactions_data = Payassist::Transfer.new.p2card(request_data)['responseData']
+
+    # To check transactions
+    transactions_data = Payassist::Transaction.new.list(request_data)['responseData']
+
+
+    # To list SBP banks
+    banks_data = Payassist::Bank.new.all['responseData']
+
+```
+**See more data in tests!**
 
 ## Development
 
