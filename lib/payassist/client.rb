@@ -41,10 +41,10 @@ module Payassist
 
     def prepare_body(tx_name, data)
       {
-        'header' => {
-          'txName' => tx_name
+        "header" => {
+          "txName" => tx_name
         },
-        'reqData' => data
+        "reqData" => data
       }
     end
 
@@ -67,7 +67,7 @@ module Payassist
 
     def build_api_token
       str = "#{Payassist.config.client_id}:#{Payassist.config.client_secret}"
-      Base64.encode64(str).gsub(/\n/, '')
+      Base64.encode64(str).gsub(/\n/, "")
     end
   end
 end
