@@ -7,7 +7,7 @@ require "payassist/balance"
 # require "payassist/bank"
 # require "payassist/transfer"
 require "payassist/bill_payment"
-# require "payassist/transaction"
+require "payassist/transaction"
 
 # Head module
 module Payassist
