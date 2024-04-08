@@ -22,17 +22,14 @@ bundle install payassist
         "currency" => ["RUB"]
     })['responseData']['accounts']
 
-
     # Deposit money on account
     bill_payment_data = Payassist::BillPayment.new.create_host2host(request_data)['responseData']
 
-
     # To proceed withdrawal
-    transactions_data = Payassist::Transfer.new.p2card(request_data)['responseData']
+    transfer_data = Payassist::Transfer.new.p2card(request_data)['responseData']
 
     # To check transactions
     transactions_data = Payassist::Transaction.new.list(request_data)['responseData']
-
 
     # To list SBP banks
     banks_data = Payassist::Bank.new.all['responseData']
