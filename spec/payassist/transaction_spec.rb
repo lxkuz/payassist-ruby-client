@@ -29,8 +29,12 @@ RSpec.describe Payassist::Transaction do
     let(:transactions_data) do
       {
         "errors" => nil,
-        "header" => { "androidVersion" => 1, "iosVersion" => "1.0", "lang" => "EN", "traceId" => "f66dbde21dbbe7bd",
-                      "txName" => "fetchMerchTx", "version" => "0.1" },
+        "header" => { "androidVersion" => 1,
+                      "iosVersion" => "1.0",
+                      "lang" => "EN",
+                      "traceId" => "f66dbde21dbbe7bd",
+                      "txName" => "fetchMerchTx",
+                      "version" => "0.1" },
         "responseData" => {
           "total" => 11,
           "transactions" => [
@@ -146,13 +150,60 @@ RSpec.describe Payassist::Transaction do
     let(:transaction_data) do
       {
         "errors" => nil,
-        "header" => { "androidVersion" => 1, "iosVersion" => "1.0", "lang" => "EN", "traceId" => "c43f99e0e1ba64b1",
+        "header" => { "androidVersion" => 1,
+                      "iosVersion" => "1.0",
+                      "lang" => "EN",
+                      "traceId" => "c43f99e0e1ba64b1",
                       "txName" => "fetchOrderInfo", "version" => "0.1" },
         "responseData" => { "total" => 1,
-                            "transactions" => [{ "_id" => "b181abdb-4ffc-404b-9a27-842e59a762dc", "amount" => "1001.00000000", "cAmount" => 0.0,
-                                                 "cType" => "RUB", "commission" => "0.00", "crypto_amount" => nil, "crypto_tx_ids" => nil, "ctime" => "2024-04-08T10:57:19.21416+03:00[Europe/Moscow]", "currency" => "RUB", "dest_address" => "4242424242424242", "dest_user" => nil, "expiredTime" => nil, "extra_id" => nil, "extra_info" => nil, "final_pay_source" => "unknown", "note" => nil, "protocol_type" => "CARD", "provider" => "CARD", "rate" => 1, "real_status" => "FAILED", "receiptCode" => nil, "ref_id" => "b181abdb-4ffc-404b-9a27-842e59a762dc", "request_id" => "2c9c407b-5576-43ba-b771-8890dc6a4e32", "source_address" => "2c9c407b-5576-43ba-b771-8890dc6a4127", "src_user" => "b3190ba6-7ff9-4caf-be08-bc546cab05cd", "tail" => nil, "tx" => [{ "address" => nil, "amount" => 1001.0, "balance" => nil, "ctime" => nil, "fee_amount" => 0, "mtime" => nil, "order_id" => "b181abdb-4ffc-404b-9a27-842e59a762dc", "ref_id" => nil, "removed" => 0, "tariff_charge" => 0, "tx_type" => "CREDIT" }], "tx_direction" => "WITHDRAW", "tx_status" => "FAILED", "tx_type" => "MERCHANT-EXTERNAL", "update_time" => "2024-04-08T10:57:19.77479+03:00[Europe/Moscow]" }] },
-        "result" => { "message" => "Request completed successfully", "request_id" => "2c9c407b-5576-43ba-b771-8890dc6a4e32",
-                      "status" => true }
+                            "transactions" => [
+                              { "_id" => "b181abdb-4ffc-404b-9a27-842e59a762dc",
+                                "amount" => "1001.00000000",
+                                "cAmount" => 0.0,
+                                "cType" => "RUB",
+                                "commission" => "0.00",
+                                "crypto_amount" => nil,
+                                "crypto_tx_ids" => nil,
+                                "ctime" => "2024-04-08T10:57:19.21416+03:00[Europe/Moscow]",
+                                "currency" => "RUB",
+                                "dest_address" => "4242424242424242",
+                                "dest_user" => nil,
+                                "expiredTime" => nil,
+                                "extra_id" => nil,
+                                "extra_info" => nil,
+                                "final_pay_source" => "unknown",
+                                "note" => nil,
+                                "protocol_type" => "CARD",
+                                "provider" => "CARD",
+                                "rate" => 1,
+                                "real_status" => "FAILED",
+                                "receiptCode" => nil,
+                                "ref_id" => "b181abdb-4ffc-404b-9a27-842e59a762dc",
+                                "request_id" => "2c9c407b-5576-43ba-b771-8890dc6a4e32",
+                                "source_address" => "2c9c407b-5576-43ba-b771-8890dc6a4127",
+                                "src_user" => "b3190ba6-7ff9-4caf-be08-bc546cab05cd",
+                                "tail" => nil,
+                                "tx" => [{ "address" => nil,
+                                           "amount" => 1001.0,
+                                           "balance" => nil,
+                                           "ctime" => nil,
+                                           "fee_amount" => 0,
+                                           "mtime" => nil,
+                                           "order_id" => "b181abdb-4ffc-404b-9a27-842e59a762dc",
+                                           "ref_id" => nil,
+                                           "removed" => 0,
+                                           "tariff_charge" => 0,
+                                           "tx_type" => "CREDIT" }],
+                                "tx_direction" => "WITHDRAW",
+                                "tx_status" => "FAILED",
+                                "tx_type" => "MERCHANT-EXTERNAL",
+                                "update_time" => "2024-04-08T10:57:19.77479+03:00[Europe/Moscow]" }
+                            ] },
+        "result" => {
+          "message" => "Request completed successfully",
+          "request_id" => "2c9c407b-5576-43ba-b771-8890dc6a4e32",
+          "status" => true
+        }
       }
     end
 
