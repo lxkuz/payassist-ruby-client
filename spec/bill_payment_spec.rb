@@ -112,4 +112,23 @@ RSpec.describe Payassist::BillPayment do
       end
     end
   end
+
+  describe "#rate_p2p" do
+    subject(:result) { bill_payment.rate_p2p }
+
+    let(:response_data) do
+      {
+        'errors' => nil,
+        'header' => {'androidVersion'=>1, 'iosVersion'=>'1.0', 'lang'=>'EN', 'traceId'=>'d825ee0f7614fccd', 'txName'=>'', 'version'=>'0.1'},
+        'responseData' => {'currencyFrom'=>'RUB', 'currencyTo'=>'USDT', 'rate'=>97.1},
+        'result' => {'message'=>'Request completed successfully', 'status'=>true},
+      }
+    end
+
+    context "when transaction is valid", vcr: "bill_payment/rate_p2p" do
+      it 'responds p2p rate' do
+        expect(result).to eq(response_data)
+      end
+    end
+  end
 end

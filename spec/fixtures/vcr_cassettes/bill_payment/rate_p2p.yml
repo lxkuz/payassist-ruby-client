@@ -1,0 +1,51 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://api.payassist.io/p2p/bill-payment/rate_p2p
+    body:
+      encoding: UTF-8
+      string: '{"header":{"txName":"PayRateExchange"},"reqData":{}}'
+    headers:
+      Authorization:
+      - Basic bGo4TkdpN3h0NVVnSngxSjpFYnNpTkJMdzVBOERxMGlwdmVhZmlHR2dDWmI5VVk=
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: ''
+    headers:
+      Date:
+      - Mon, 08 Apr 2024 11:29:32 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      X-Content-Type-Options:
+      - nosniff
+      X-Xss-Protection:
+      - 1; mode=block
+      Cache-Control:
+      - no-cache, no-store, max-age=0, must-revalidate
+      Pragma:
+      - no-cache
+      Expires:
+      - '0'
+      X-Frame-Options:
+      - DENY
+    body:
+      encoding: UTF-8
+      string: '{"header":{"txName":"","version":"0.1","lang":"EN","androidVersion":1,"iosVersion":"1.0","traceId":"d825ee0f7614fccd"},"result":{"status":true,"message":"Request
+        completed successfully"},"responseData":{"currencyFrom":"RUB","currencyTo":"USDT","rate":97.10},"errors":null}'
+    http_version:
+  recorded_at: Mon, 08 Apr 2024 11:29:32 GMT
+recorded_with: VCR 5.1.0

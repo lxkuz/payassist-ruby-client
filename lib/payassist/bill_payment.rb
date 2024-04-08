@@ -17,7 +17,7 @@ module Payassist
     end
 
     def rate_p2p
-      body = prepare_body('PayRateExchange', data)
+      body = prepare_body('PayRateExchange', {})
       send_request(path: 'bill-payment/rate_p2p', body: body)
     end
   end
