@@ -5,7 +5,7 @@ http_interactions:
     uri: https://api.payassist.io/p2p/transfer/send-card-external
     body:
       encoding: UTF-8
-      string: '{"header":{"txName":"P2Card"},"reqData":{"user_id":"user1","amount":5001,"platform":"CARD","currency":"RUB","request_id":"2c9c407b-5576-43ba-b771-8890dc6a4432","ip":"135.181.253.82","recipient":"4242424242424242","c_from":"CARDRUB","c_to":"SBERRUB","txn":"2c9c407b-5576-43ba-b771-8890dc6a4e27","user_agent":"Mozilla/5.0
+      string: '{"header":{"txName":"P2Card"},"reqData":{"user_id":"user1","amount":5001,"platform":"CARD","currency":"RUB","request_id":"2c9c407b-5576-43ba-b771-8890dc6a4432","ip":"135.181.xx.xx","recipient":"4242424242424242","c_from":"CARDRUB","c_to":"SBERRUB","txn":"2c9c407b-5576-43ba-b771-8890dc6a4e27","user_agent":"Mozilla/5.0
         (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.116
         Safari/537.36","email":"m2lxkuz@gmail.com","cid":"2c9c407b-5576-43ba-b771-8890dc6a4227","date":"2024-04-09T17:13:14","client":"2c9c407b-5576-43ba-b771-8890dc6a4127"}}'
     headers:
