@@ -1,0 +1,53 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://api.payassist.io/p2p/transfer/send-card-external
+    body:
+      encoding: UTF-8
+      string: '{"header":{"txName":"P2Card"},"reqData":{"user_id":"user1","amount":5001,"platform":"CARD","currency":"RUB","request_id":"2c9c407b-5576-43ba-b771-8890dc6a4432","ip":"135.181.253.82","recipient":"4242424242424242","c_from":"CARDRUB","c_to":"SBERRUB","txn":"2c9c407b-5576-43ba-b771-8890dc6a4e27","user_agent":"Mozilla/5.0
+        (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.116
+        Safari/537.36","email":"m2lxkuz@gmail.com","cid":"2c9c407b-5576-43ba-b771-8890dc6a4227","date":"2024-04-09T17:13:14","client":"2c9c407b-5576-43ba-b771-8890dc6a4127"}}'
+    headers:
+      Authorization:
+      - Basic bGo4TkdpN3h0NVVnSngxSjpFYnNpTkJMdzVBOERxMGlwdmVhZmlHR2dDWmI5VVk=
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: ''
+    headers:
+      Date:
+      - Tue, 09 Apr 2024 10:13:22 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      X-Content-Type-Options:
+      - nosniff
+      X-Xss-Protection:
+      - 1; mode=block
+      Cache-Control:
+      - no-cache, no-store, max-age=0, must-revalidate
+      Pragma:
+      - no-cache
+      Expires:
+      - '0'
+      X-Frame-Options:
+      - DENY
+    body:
+      encoding: UTF-8
+      string: '{"header":{"txName":"P2Card","version":"0.1","lang":"EN","androidVersion":1,"iosVersion":"1.0","traceId":"9974a5503f643390"},"result":{"status":true,"message":"Request
+        completed successfully","request_id":"2c9c407b-5576-43ba-b771-8890dc6a4432"},"responseData":{"amount":5001,"status":"APPROVED","currency":"RUB","_id":"cec4a82a-acd6-4e44-8fae-36352fecc2e4","ref_id":"0eeb478a-c1df-4ac6-9a9e-ff2d298bee45","extra_id":"","request_id":"2c9c407b-5576-43ba-b771-8890dc6a4432","original_amount":5001},"errors":null}'
+    http_version:
+  recorded_at: Tue, 09 Apr 2024 10:13:22 GMT
+recorded_with: VCR 5.1.0
