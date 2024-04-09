@@ -3,7 +3,7 @@
 require_relative "lib/payassist/version"
 
 Gem::Specification.new do |spec|
-  spec.name = "Payassist"
+  spec.name = "payassist"
   spec.version = Payassist::VERSION
   spec.authors = ["Alexey Kuznetsov"]
   spec.email = ["a.kuznetsov@okft.io"]

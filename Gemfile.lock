@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    Payassist (0.1.0)
+    payassist (0.1.1)
       faraday (~> 1.0)
 
 GEM
@@ -98,7 +98,7 @@ PLATFORMS
   x86_64-linux
 
 DEPENDENCIES
-  Payassist!
+  payassist!
   pry (~> 0.12)
   rake (~> 13.0)
   rspec (~> 3.0)
