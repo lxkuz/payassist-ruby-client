@@ -1,0 +1,51 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.payassist.io/p2p/bank/89221111111?header%5BtxName%5D=BanksAllByNumber
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Authorization:
+      - Basic bGo4TkdpN3h0NVVnSngxSjpFYnNpTkJMdzVBOERxMGlwdmVhZmlHR2dDWmI5VVk=
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: ''
+    headers:
+      Date:
+      - Tue, 09 Apr 2024 09:54:34 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      X-Content-Type-Options:
+      - nosniff
+      X-Xss-Protection:
+      - 1; mode=block
+      Cache-Control:
+      - no-cache, no-store, max-age=0, must-revalidate
+      Pragma:
+      - no-cache
+      Expires:
+      - '0'
+      X-Frame-Options:
+      - DENY
+    body:
+      encoding: UTF-8
+      string: '{"header":{"txName":"","version":"0.1","lang":"EN","androidVersion":1,"iosVersion":"1.0","traceId":"ed69f7803b953c40"},"result":{"status":true,"message":"Request
+        completed successfully"},"responseData":[],"errors":null}'
+    http_version:
+  recorded_at: Tue, 09 Apr 2024 09:54:35 GMT
+recorded_with: VCR 5.1.0
