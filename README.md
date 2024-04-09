@@ -28,6 +28,9 @@ bundle install payassist
     # To proceed withdrawal
     transfer_data = Payassist::Transfer.new.p2card(request_data)['responseData']
 
+    # To proceed SBP withdrawal
+    transfer_data = Payassist::Transfer.new.sbp(request_data)['responseData']
+
     # To check transactions
     transactions_data = Payassist::Transaction.new.list(request_data)['responseData']
 
